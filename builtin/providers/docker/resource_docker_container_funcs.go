@@ -287,7 +287,6 @@ func resourceDockerContainerRead(d *schema.ResourceData, meta interface{}) error
 		d.Set("ip_address", container.NetworkSettings.IPAddress)
 		d.Set("ip_prefix_length", container.NetworkSettings.IPPrefixLen)
 		d.Set("gateway", container.NetworkSettings.Gateway)
-		d.Set("bridge", container.NetworkSettings.Bridge)
 	}
 
 	return nil
